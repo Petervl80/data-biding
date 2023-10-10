@@ -1,0 +1,44 @@
+<div id="container">
+    <p>{{olaMundo}}</p>
+
+    <a href="{{google}}">Google</a>
+
+    <h2>Clique no paragráfo:</h2>
+    <p (click)="mudaCor()" [style.color]="corParagrafo" [style.backgroundColor]="corBackground">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Fugit ipsa quidem voluptatibus facere quae sapiente culpa nostrum odio. 
+        Nam, quis magnam praesentium id possimus iusto quasi expedita corporis suscipit odio.</p>
+
+
+    <h2>Selecione um texto:</h2>
+
+    <select #select (change)="mudarTexto(+select.value)">
+        <option value="1">Primeiro texto</option>
+        <option value="2">Segundo texto</option>
+        <option value="3">Terceiro texto</option>
+        <option value="4">Quarto texto</option>
+    </select>
+
+    <p [style.display]="index == 1 ? 'block' : 'none'" [style.color]="'green'"> 
+        <strong>Primeiro texto:</strong>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        At iure beatae sapiente consequatur in veniam officia ex. 
+        Reiciendis perspiciatis, dolorum porro dicta similique corrupti illo eos nesciunt laudantium, expedita sed?</p>
+
+    <p [style.display]="index == 2 ? 'block' : 'none'" [style.color]="'blue'">
+        <strong>Segundo texto:</strong>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        At iure beatae sapiente consequatur in veniam officia ex. 
+        Reiciendis perspiciatis, dolorum porro dicta similique corrupti illo eos nesciunt laudantium, expedita sed?</p>
+
+    <p [style.display]="index == 3 ? 'block' : 'none'" [style.color]="'yellow'">
+        <strong>Terceiro texto:</strong>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        At iure beatae sapiente consequatur in veniam officia ex. 
+        Reiciendis perspiciatis, dolorum porro dicta similique corrupti illo eos nesciunt laudantium, expedita sed?</p>
+
+    <p [style.display]="index == 4 ? 'block' : 'none'" [style.color]="'red'">
+        <strong>Quarto texto:</strong>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        At iure beatae sapiente consequatur in veniam officia ex. 
+        Reiciendis perspiciatis, dolorum porro dicta similique corrupti illo eos nesciunt laudantium, expedita sed?</p>
+</div>
